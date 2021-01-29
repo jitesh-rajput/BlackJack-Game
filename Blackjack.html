@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Blackjack Game 
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    .play{
+        margin-top: 50px;
+        height:450px;
+        border: 5px solid black;
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(42, 134, 42);
+        color: white;
+    }
+    .you{
+        width: 50%;
+        border-right: 2px solid black;
+        text-align: center;
+    }
+    img{
+        height: 100px;
+        width: 100px;
+        margin:5px;
+    }
+    .computer{
+        width: 50%;
+        border-left:2px solid black;
+        text-align: center;
+    }
+    .menu{
+        padding: 10px;
+        border: 3px solid black;
+        text-align: center;
+    }
+    .menu button{
+        margin-left: 25px;
+    }
+    .score{
+        border: 3px solid black;
+        display:flex;
+        justify-content: space-around;
+    }
+
+</style>
+
+<body onload="ready()">
+    <center>
+        <h3> Black Jack </h3>
+    </center>
+    <div class="container">
+    <div class="play">
+        <div class="you">
+            <h3> You :- <span id="your-score">0</span></h3>
+            <hr>
+            <div id="your-card">
+            </div>
+            <div id="you-brust">
+            </div>
+        </div>
+        <div class="computer">
+            <h3>Computer :- <span id="pc-score">0</span></h3>
+            <hr>
+            <div id="pc-card">
+            </div>
+            <div id="pc-brust">
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <button type="button" id="hit" class="btn btn-primary"> Hit </button>
+        <button type="button" class="btn btn-warning" id ="restart"> Restart </button>
+        <button type="button" class="btn btn-danger" id="deal"> Deal </button>
+    </div>
+    <div class="score">
+       <h5>Win :- <span id="win">0</span></h5>
+       <h5>Loss :- <span id="loss">0</span></h5>
+       <h5>Draws :- <span id="draws">0</span></h5>
+    </div>
+    </div>
+    <script src="/Blackjack.js"></script>
+
+</body>
